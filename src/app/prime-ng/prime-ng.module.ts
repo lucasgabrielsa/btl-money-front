@@ -4,6 +4,7 @@ import { TabViewModule } from "primeng/tabview";
 import { InputTextModule } from "primeng/inputtext";
 import { ButtonModule } from "primeng/button";
 import { TableModule } from "primeng/table";
+import { TooltipModule } from "primeng/tooltip";
 
 @NgModule({
   declarations: [],
@@ -12,14 +13,16 @@ import { TableModule } from "primeng/table";
     TabViewModule,
     InputTextModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    TooltipModule
   ],
   exports: [
     CommonModule,
     TabViewModule,
     InputTextModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    TooltipModule
   ]
 })
 export class PrimeNgModuleCustom {}
