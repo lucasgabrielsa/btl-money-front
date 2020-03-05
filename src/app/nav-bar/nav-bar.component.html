@@ -1,7 +1,16 @@
 <nav class="navbar">
   <div class="container">
     <div class="p-col">
-      teste
+      <a href="#" (click)="exibindoMenu = !exibindoMenu"
+        ><i class="pi pi-bars bars-icons"></i
+      ></a>
     </div>
   </div>
+
+  <ul class="navbar-menu" [hidden]="!exibindoMenu">
+    <li class="navbar-usuario">Lucas Gabriel</li>
+    <li class="navbar-menu-item"><a href="#">Lançamentos</a></li>
+    <li class="navbar-menu-item"><a href="#">Pessoas</a></li>
+    <li class="navbar-menu-item"><a href="#">Logout</a></li>
+  </ul>
 </nav>
