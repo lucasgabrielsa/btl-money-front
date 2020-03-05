@@ -5,6 +5,7 @@ import { InputTextModule } from "primeng/inputtext";
 import { ButtonModule } from "primeng/button";
 import { TableModule } from "primeng/table";
 import { TooltipModule } from "primeng/tooltip";
+import { InputTextareaModule } from "primeng/inputtextarea";
 
 @NgModule({
   declarations: [],
@@ -14,7 +15,8 @@ import { TooltipModule } from "primeng/tooltip";
     InputTextModule,
     ButtonModule,
     TableModule,
-    TooltipModule
+    TooltipModule,
+    InputTextareaModule
   ],
   exports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { TooltipModule } from "primeng/tooltip";
     InputTextModule,
     ButtonModule,
     TableModule,
-    TooltipModule
+    TooltipModule,
+    InputTextareaModule
   ]
 })
 export class PrimeNgModuleCustom {}

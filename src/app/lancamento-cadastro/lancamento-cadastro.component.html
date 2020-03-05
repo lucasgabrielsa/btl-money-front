@@ -1,0 +1,48 @@
+<div class="container">
+  <form>
+    <div class="p-grid">
+      <div class="p-col"><h1>Novo Lancamento</h1></div>
+    </div>
+
+    <div class="p-grid">
+      <div class="p-col-6 p-md-6 p-lg-3 ui-fluid">
+        <label>Vencimento:</label><input pInputText />
+      </div>
+      <div class="p-col-6 p-md-6 p-lg-3 ui-fluid">
+        <label>Pagamento:</label><input pInputText />
+      </div>
+    </div>
+
+    <div class="p-grid">
+      <div class="p-col-12 p-md-9 p-lg-9 ui-fluid">
+        <label>Descrição:</label><input pInputText />
+      </div>
+      <div class="p-col-12 p-md-3 p-lg-3 ui-fluid">
+        <label>Valor:</label><input pInputText placeholder="0,00" />
+      </div>
+    </div>
+
+    <div class="p-grid">
+      <div class="p-col-12 p-md-6 p-lg-6 ui-fluid">
+        <label>Categoria:</label><input pInputText />
+      </div>
+      <div class="p-col-12 p-md-6 p-lg-6 ui-fluid">
+        <label>Pessoa:</label><input pInputText />
+      </div>
+    </div>
+
+    <div class="p-grid">
+      <div class="p-col-12 p-md-12 p-lg-12 ui-fluid">
+        <label>Observação:</label
+        ><textarea pInputTextarea [rows]="5" pInputTextArea></textarea>
+      </div>
+    </div>
+
+    <div class="p-grid">
+      <div class="p-col-12 p-md-6 p-lg-6 ui-fluid">
+        <p-button label="Salvar"></p-button>
+        <p-button label="Novo" style="margin-left: 5px;"></p-button>
+      </div>
+    </div>
+  </form>
+</div>

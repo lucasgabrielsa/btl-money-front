@@ -8,9 +8,10 @@ import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
+import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 
 @NgModule({
-  declarations: [AppComponent, LancamentosPesquisaComponent, NavBarComponent, PessoasPesquisaComponent],
+  declarations: [AppComponent, LancamentosPesquisaComponent, NavBarComponent, PessoasPesquisaComponent, LancamentoCadastroComponent],
   imports: [BrowserModule, AppRoutingModule, PrimeNgModuleCustom, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent]
