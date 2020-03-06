@@ -10,6 +10,8 @@ import { CalendarModule } from "primeng/calendar";
 import { SelectButtonModule } from "primeng/selectbutton";
 import { DropdownModule } from "primeng/dropdown";
 import { InputMaskModule } from "primeng/inputmask";
+import { MessagesModule } from "primeng/messages";
+import { MessageModule } from "primeng/message";
 
 @NgModule({
   declarations: [],
@@ -24,7 +26,9 @@ import { InputMaskModule } from "primeng/inputmask";
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
-    InputMaskModule
+    InputMaskModule,
+    MessagesModule,
+    MessageModule
   ],
   exports: [
     CommonModule,
@@ -37,7 +41,9 @@ import { InputMaskModule } from "primeng/inputmask";
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
-    InputMaskModule
+    InputMaskModule,
+    MessagesModule,
+    MessageModule
   ]
 })
 export class PrimeNgModuleCustom {}

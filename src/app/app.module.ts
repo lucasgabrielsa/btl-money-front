@@ -10,7 +10,8 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { PessoasPesquisaComponent } from "./pessoas-pesquisa/pessoas-pesquisa.component";
 import { LancamentoCadastroComponent } from "./lancamento-cadastro/lancamento-cadastro.component";
 import { NgxCurrencyModule } from "ngx-currency";
-import { PessoasCadastroComponent } from './pessoas-cadastro/pessoas-cadastro.component';
+import { PessoasCadastroComponent } from "./pessoas-cadastro/pessoas-cadastro.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PessoasCadastroComponent } from './pessoas-cadastro/pessoas-cadastro.co
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     PrimeNgModuleCustom,
     FontAwesomeModule,
