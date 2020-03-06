@@ -36,7 +36,13 @@
       </div>
       <div class="p-col-12 p-md-3 p-lg-3 ui-fluid">
         <label>Valor:</label
-        ><input pInputText placeholder="0,00" style="text-align: right;" />
+        ><input
+          pInputText
+          currencyMask
+          [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+          placeholder="0,00"
+          style="text-align: right;"
+        />
       </div>
     </div>
 
