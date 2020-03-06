@@ -5,11 +5,28 @@
     </div>
 
     <div class="p-grid">
+      <div class="p-col-12 p-md-3 p-lg-3 ui-fluid">
+        <p-selectButton [options]="tiposLancamentos" #tipo></p-selectButton>
+      </div>
+    </div>
+
+    <div class="p-grid">
       <div class="p-col-6 p-md-6 p-lg-3 ui-fluid">
-        <label>Vencimento:</label><input pInputText />
+        <label>Vencimento:</label
+        ><p-calendar
+          [showIcon]="true"
+          dateFormat="dd/mm/yy"
+          [readonlyInput]="true"
+        ></p-calendar>
       </div>
       <div class="p-col-6 p-md-6 p-lg-3 ui-fluid">
-        <label>Pagamento:</label><input pInputText />
+        <label
+          >{{ tipo.value === "RECEITA" ? "Recebimento" : "Pagamento" }}:</label
+        ><p-calendar
+          [showIcon]="true"
+          dateFormat="dd/mm/yy"
+          [readonlyInput]="true"
+        ></p-calendar>
       </div>
     </div>
 
@@ -18,16 +35,29 @@
         <label>Descrição:</label><input pInputText />
       </div>
       <div class="p-col-12 p-md-3 p-lg-3 ui-fluid">
-        <label>Valor:</label><input pInputText placeholder="0,00" />
+        <label>Valor:</label
+        ><input pInputText placeholder="0,00" style="text-align: right;" />
       </div>
     </div>
 
     <div class="p-grid">
       <div class="p-col-12 p-md-6 p-lg-6 ui-fluid">
-        <label>Categoria:</label><input pInputText />
+        <label>Categoria:</label
+        ><p-dropdown
+          [options]="categorias"
+          placeholder="Selecione a categoria"
+          [showClear]="true"
+          filter="true"
+        ></p-dropdown>
       </div>
       <div class="p-col-12 p-md-6 p-lg-6 ui-fluid">
-        <label>Pessoa:</label><input pInputText />
+        <label>Pessoa:</label
+        ><p-dropdown
+          [options]="pessoas"
+          placeholder="Selecione a pessoa"
+          [showClear]="true"
+          filter="true"
+        ></p-dropdown>
       </div>
     </div>
 
@@ -39,9 +69,10 @@
     </div>
 
     <div class="p-grid">
-      <div class="p-col-12 p-md-6 p-lg-6 ui-fluid">
-        <p-button label="Salvar"></p-button>
-        <p-button label="Novo" style="margin-left: 5px;"></p-button>
+      <div class="p-col-6 p-justify-start ui-fluid">
+        <p-button label="Salvar"></p-button>&nbsp;
+        <p-button label="Novo"></p-button>&nbsp;
+        <a href="#">Voltar para pesquisa</a>&nbsp;
       </div>
     </div>
   </form>
