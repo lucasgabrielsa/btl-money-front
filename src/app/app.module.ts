@@ -10,6 +10,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { PessoasPesquisaComponent } from "./pessoas-pesquisa/pessoas-pesquisa.component";
 import { LancamentoCadastroComponent } from "./lancamento-cadastro/lancamento-cadastro.component";
 import { NgxCurrencyModule } from "ngx-currency";
+import { PessoasCadastroComponent } from './pessoas-cadastro/pessoas-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgxCurrencyModule } from "ngx-currency";
     LancamentosPesquisaComponent,
     NavBarComponent,
     PessoasPesquisaComponent,
-    LancamentoCadastroComponent
+    LancamentoCadastroComponent,
+    PessoasCadastroComponent
   ],
   imports: [
     BrowserModule,
