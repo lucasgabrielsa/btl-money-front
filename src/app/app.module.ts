@@ -13,6 +13,7 @@ import { NgxCurrencyModule } from "ngx-currency";
 import { PessoasCadastroComponent } from "./pessoas-cadastro/pessoas-cadastro.component";
 import { FormsModule } from "@angular/forms";
 import { MessageComponent } from './message/message.component';
+import { LancamentosTabelaComponent } from './lancamentos-tabela/lancamentos-tabela.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MessageComponent } from './message/message.component';
     PessoasPesquisaComponent,
     LancamentoCadastroComponent,
     PessoasCadastroComponent,
-    MessageComponent
+    MessageComponent,
+    LancamentosTabelaComponent
   ],
   imports: [
     BrowserModule,

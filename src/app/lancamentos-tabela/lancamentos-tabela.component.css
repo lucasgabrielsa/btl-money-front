@@ -1,0 +1,16 @@
+.classValor {
+    text-align: right;
+    width: 120px;
+  }
+  .classData {
+    text-align: center;
+  }
+  .classButtonsTable {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .classButtonsHeader {
+    width: 120px;
+  }
+  
