@@ -1,7 +1,9 @@
 <div class="container">
   <form>
     <div class="p-grid">
-      <div class="p-col"><h1>Novo Lancamento</h1></div>
+      <div class="p-col">
+        <h1>Novo Lancamento</h1>
+      </div>
     </div>
 
     <div class="p-grid">
@@ -12,91 +14,45 @@
 
     <div class="p-grid">
       <div class="p-col-6 p-md-6 p-lg-3 ui-fluid">
-        <label>Vencimento:</label
-        ><p-calendar
-          [showIcon]="true"
-          dateFormat="dd/mm/yy"
-          [readonlyInput]="true"
-        ></p-calendar>
+        <label>Vencimento:</label>
+        <p-calendar [showIcon]="true" dateFormat="dd/mm/yy" [readonlyInput]="true"></p-calendar>
       </div>
       <div class="p-col-6 p-md-6 p-lg-3 ui-fluid">
-        <label
-          >{{ tipo.value === "RECEITA" ? "Recebimento" : "Pagamento" }}:</label
-        ><p-calendar
-          [showIcon]="true"
-          dateFormat="dd/mm/yy"
-          [readonlyInput]="true"
-        ></p-calendar>
+        <label>{{ tipo.value === "RECEITA" ? "Recebimento" : "Pagamento" }}:</label>
+        <p-calendar [showIcon]="true" dateFormat="dd/mm/yy" [readonlyInput]="true"></p-calendar>
       </div>
     </div>
 
     <div class="p-grid">
       <div class="p-col-12 p-md-9 p-lg-9 ui-fluid">
-        <label>Descrição:</label
-        ><input
-          pInputText
-          ngModel
-          name="descricao"
-          #descricao="ngModel"
-          required
-          minlength="3"
-        />
-
-        <div
-        class="p-col-12 p-md-9 p-lg-9 ui-fluid"
-        *ngIf="descricao.hasError('minlength') && descricao.dirty"
-        >
-        <p-message
-          severity="error"
-          text="Mínimo de {{
-            descricao.errors.minlength.requiredLength
-          }} caracteres,
-          você digitou {{ descricao.errors.minlength.actualLength }}"
-        ></p-message>
+        <label>Descrição:</label><input pInputText ngModel name="descricao" #descricao="ngModel" required
+          minlength="3" />
+        <app-message [control]="descricao" error="minlength" text="Tamanho mínimo de 3 caracteres"></app-message>
+        <app-message [control]="descricao" error="required" text="Descrição é obrigatório"></app-message>
       </div>
 
-      </div>     
-
       <div class="p-col-12 p-md-3 p-lg-3 ui-fluid">
-        <label>Valor:</label
-        ><input
-          pInputText
-          ngModel
-          name="valor"
-          currencyMask
-          [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
-          placeholder="0,00"
-          style="text-align: right;"
-          required
-        />   
-      </div>      
+        <label>Valor:</label><input pInputText ngModel name="valor" currencyMask
+          [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" placeholder="0,00" style="text-align: right;"
+          required />
+      </div>
     </div>
 
     <div class="p-grid">
       <div class="p-col-12 p-md-6 p-lg-6 ui-fluid">
-        <label>Categoria:</label
-        ><p-dropdown
-          [options]="categorias"
-          placeholder="Selecione a categoria"
-          [showClear]="true"
-          filter="true"
-        ></p-dropdown>
+        <label>Categoria:</label>
+        <p-dropdown [options]="categorias" placeholder="Selecione a categoria" [showClear]="true" filter="true">
+        </p-dropdown>
       </div>
       <div class="p-col-12 p-md-6 p-lg-6 ui-fluid">
-        <label>Pessoa:</label
-        ><p-dropdown
-          [options]="pessoas"
-          placeholder="Selecione a pessoa"
-          [showClear]="true"
-          filter="true"
-        ></p-dropdown>
+        <label>Pessoa:</label>
+        <p-dropdown [options]="pessoas" placeholder="Selecione a pessoa" [showClear]="true" filter="true"></p-dropdown>
       </div>
     </div>
 
     <div class="p-grid">
       <div class="p-col-12 p-md-12 p-lg-12 ui-fluid">
-        <label>Observação:</label
-        ><textarea pInputTextarea [rows]="5" pInputTextArea></textarea>
+        <label>Observação:</label><textarea pInputTextarea [rows]="5" pInputTextArea></textarea>
       </div>
     </div>
 

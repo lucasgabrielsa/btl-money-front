@@ -12,6 +12,7 @@ import { LancamentoCadastroComponent } from "./lancamento-cadastro/lancamento-ca
 import { NgxCurrencyModule } from "ngx-currency";
 import { PessoasCadastroComponent } from "./pessoas-cadastro/pessoas-cadastro.component";
 import { FormsModule } from "@angular/forms";
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from "@angular/forms";
     NavBarComponent,
     PessoasPesquisaComponent,
     LancamentoCadastroComponent,
-    PessoasCadastroComponent
+    PessoasCadastroComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
