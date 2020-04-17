@@ -41,33 +41,11 @@
           required
           minlength="3"
         />
-      </div>
 
-      <!--
-      <div
-        *ngIf="descricao.hasError('minlength') && descricao.dirty"
-        class="p-col-12 p-md-9 p-lg-9 ui-message ui-message-error"
-      >
-        Mínimo de {{ descricao.errors.minlength.requiredLength }} caracteres,
-        você digitou {{ descricao.errors.minlength.actualLength }}
-      </div>
-      -->
-
-      <div class="p-col-12 p-md-3 p-lg-3 ui-fluid">
-        <label>Valor:</label
-        ><input
-          pInputText
-          currencyMask
-          [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
-          placeholder="0,00"
-          style="text-align: right;"
-        />
-      </div>
-
-      <div
+        <div
         class="p-col-12 p-md-9 p-lg-9 ui-fluid"
         *ngIf="descricao.hasError('minlength') && descricao.dirty"
-      >
+        >
         <p-message
           severity="error"
           text="Mínimo de {{
@@ -76,6 +54,22 @@
           você digitou {{ descricao.errors.minlength.actualLength }}"
         ></p-message>
       </div>
+
+      </div>     
+
+      <div class="p-col-12 p-md-3 p-lg-3 ui-fluid">
+        <label>Valor:</label
+        ><input
+          pInputText
+          ngModel
+          name="valor"
+          currencyMask
+          [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+          placeholder="0,00"
+          style="text-align: right;"
+          required
+        />   
+      </div>      
     </div>
 
     <div class="p-grid">
