@@ -1,16 +1,16 @@
 <nav class="navbar">
   <div class="container">
     <div class="p-col">
-      <a href="#" (click)="exibindoMenu = !exibindoMenu"
-        ><i class="pi pi-bars bars-icons"></i
-      ></a>
+      <a href="#" (click)="exibindoMenu = !exibindoMenu"><i class="pi pi-bars bars-icons"></i></a>
     </div>
   </div>
 
   <ul class="navbar-menu" [hidden]="!exibindoMenu">
     <li class="navbar-usuario">Lucas Gabriel</li>
-    <li class="navbar-menu-item"><a href="#">Lançamentos</a></li>
-    <li class="navbar-menu-item"><a href="#">Pessoas</a></li>
-    <li class="navbar-menu-item"><a href="#">Logout</a></li>
+    <li class="navbar-menu-item"><a routerLink="lancamentos/cadastro">Lançamentos Cadastro</a></li>
+    <li class="navbar-menu-item"><a routerLink="lancamentos/pesquisa">Lançamentos Pesquisa</a></li>
+    <li class="navbar-menu-item"><a routerLink="pessoas/cadastro">Pessoas Cadastro</a></li>
+    <li class="navbar-menu-item"><a routerLink="pessoas/pesquisa">Pessoas Pesquisa</a></li>
+    <li class="navbar-menu-item"><a routerLink="/dashboard">Logout</a></li>
   </ul>
 </nav>
