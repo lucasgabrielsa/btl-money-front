@@ -27,7 +27,7 @@ export class MessageComponent {
     const condicao = this.control.hasError(this.error) && this.control.dirty;
     if (condicao) {
       this.msgs = [];
-      this.msgs.push({ severity: 'error', summary: this.text, detail: '' });
+      this.msgs.push({ severity: 'error', summary: this.text });
     }
     return condicao;
   }
